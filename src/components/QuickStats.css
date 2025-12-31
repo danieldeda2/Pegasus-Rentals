@@ -1,0 +1,152 @@
+.quickstats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.stats_row{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+.stats_col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    width: 23%;
+
+    img{
+        height: 50px;
+        width: 50px;
+        margin-left: 41%;
+        margin-bottom: 7px;
+    }
+
+    p{
+        color: white;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+}
+
+.stats_col2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    width: 23%;
+
+    img{
+        height: 55px;
+        width: 55px;
+        margin-left: 43%;
+    }
+
+    p{
+        color: white;
+        font-size: 25px;
+    }
+}
+
+.stats_col3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    width: 23%;
+
+    img{
+        height: 60px;
+        width: 60px;
+        margin-left: 43%;
+    }
+
+    p{
+        color: white;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .quickstats{
+        
+        .quick_about{
+            width: 80vw;
+            margin-left: 10vw;
+        }
+
+    }
+
+    .stats_row{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 75vw;
+        margin-left: 11vw;
+    }
+
+    .stats_col1{
+        width: 75vw;
+
+        p{
+            font-size: 20px;
+            }
+
+            img{
+                margin-left: 42%;
+                margin-bottom: -10px;
+            }
+    }
+
+    .stats_col2{
+        width: 75vw;
+
+        p{
+            font-size: 20px;
+            }
+
+            img{
+                margin-left: 42%;
+                margin-bottom: -10px;
+            }
+    }
+
+    .stats_col3{
+        width: 75vw;
+
+        p{
+            font-size: 20px;
+            margin-left: 12px;
+            }
+
+        img{
+            margin-left: 42%;
+            margin-bottom: -13px;
+        }
+    }
+
+}
+
+.quick_about{
+    font-weight: 50;
+    font-size: 25px;
+    color: white;
+    width: 55%;
+    margin-left: 22%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

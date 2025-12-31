@@ -1,0 +1,418 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.footer{
+    margin-top: 100px;
+    width: 10vw;
+}
+
+.columns{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 2vw;
+    width: 20vw;
+    
+
+    h4{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    h3{
+        margin-top: -10px;
+        font-weight: 200;
+    }
+
+    h2{
+        font-size: 40px;
+        margin-top: 10px;
+        margin-left: 10px;
+        color: orange;
+    }
+
+}
+
+.horse_logo{
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.logo_name{
+    display: flex;
+    flex-direction: row;
+
+}
+
+button{
+    height: 36px;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: white;
+    color: orange;
+}
+
+
+input{
+    height: 36px;
+    width: 20vw;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    background-color: #202020;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.social_media_icons{
+
+    img{
+        height: 30px;
+        width: 30px;
+        margin-left: 6px;
+        margin-right: 6px;
+        cursor: pointer;
+    }
+
+    img:hover{
+        scale: 1.3;
+    }
+}
+
+
+.copyright{
+    background-color: #181818;
+    color: white;
+    padding-bottom: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    width: 99vw;
+
+    p{
+        padding-top: 13px;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+
+    .copyright{
+        width: 98.9vw;
+    }
+
+}
+
+
+@media screen and (max-width: 1500px) {
+
+    .copyright{
+        width: 98.8vw;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80vw;
+        margin-left: 17vw;
+    }
+        
+    .footer{
+        margin-top: 100px;
+        width: 10vw;
+    }
+
+    .copyright{
+        width: 98.6vw;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .copyright{
+        width: 98.4vw;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .copyright{
+        width: 98.2vw;
+    }
+
+}
+
+
+
+@media screen and (max-width: 950px) {
+
+    .copyright{
+        width: 98vw;
+    }
+
+}
+
+
+
+@media screen and (max-width: 830px) {
+
+    .copyright{
+        width: 97.8vw;
+    }
+
+}
+
+
+
+@media screen and (max-width: 770px) {
+
+    .copyright{
+        width: 97.5vw;
+    }
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    .copyright{
+        width: 97vw;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+    }
+
+        
+    .footer{
+        margin-top: 100px;
+        width: 100vw;
+    }
+
+
+    .copyright{
+        width: 100%;
+
+        p{
+            width: 80vw;
+            font-weight: 300;
+            font-size: 18px;
+            margin-left: 10vw;
+        }
+    }
+
+    .logo_name{
+
+        margin-left: -4vw;
+
+        img{
+            margin-top: 23px;
+            margin-right: -24px;
+            margin-bottom: 10px;
+        }
+
+        h2{
+            margin-left: 35px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+    
+    }
+
+    .slogan{
+        font-size: 18px;
+        margin-left: 0vw;
+        width: 40vw;
+    }
+
+
+    .columns{
+
+        h4{
+            font-size: 20px;
+            margin-bottom: 15px;
+            margin-left: -22vw;
+            margin-bottom: 20px;
+            width: 80vw;
+        }
+
+        input{
+            height: 36px;
+            width: 210px;
+            background-color: #202020;
+            border: none;
+            border-radius: 5px;
+            margin-left: -10vw;
+
+
+        }
+
+        h3{
+            width: 80vw;
+            margin-left: -22vw;
+        }
+
+        button{
+            height: 36px;
+            cursor: pointer;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: -9vw;
+            width: 210px;
+            margin-bottom: 15px;
+            color: black;
+            font-size: 17px;
+        }
+            
+    }
+
+        
+    
+
+    .social_media_icons{
+        margin-left: 2vw;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+    
+
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+
+    .copyright{
+        width: 100%;
+
+        p{
+            width: 80%;
+            font-size: 20px;
+            margin-left: 10%;
+        }
+    }
+
+    .logo_name{
+
+
+        img{
+            margin-top: 40px;
+            margin-right: -24px;
+        }
+
+        h2{
+            margin-left: 35px;
+            margin-top: 60px;
+            margin-bottom: 10px;
+        }
+
+    
+    }
+
+    .slogan{
+        font-size: 18px;
+        margin-left: -7px;
+    }
+
+
+    .columns{
+
+        h4{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        input{
+            height: 36px;
+            width: 210px;
+            background-color: #202020;
+            border: none;
+            border-radius: 5px;
+            margin-left: -40px;
+
+
+        }
+
+        button{
+            height: 36px;
+            cursor: pointer;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: -34px;
+            width: 210px;
+            margin-bottom: 15px;
+        }
+            
+    }
+
+        
+    
+
+    .social_media_icons{
+        margin-bottom: 10px;
+    }
+
+
+
+    
+
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+.OurFleetPage{
+
+    .ourFleet{
+        margin-top: 50px;
+        color: white;
+        background-color: black;
+        width: 98vw;
+        align-items: center;
+
+        h1{
+            margin-bottom: -30px;
+            width: 80vw;
+            margin-left: 10vw;
+            text-align: center;
+        }
+
+        .move{
+            width: 80vw;
+            margin-left: 10vw;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .ourFleet{
+        margin-left:  0vw;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+
+    .ourFleet{
+
+        h1{
+            font-size: 60px;
+            padding-top: 20px;
+            margin-left: -55px;
+        }
+
+        .move{
+            .fleet_items{
+                margin-top: -20px;
+                width: 20vw;
+                margin-left: 2.5vw;
+            }
+        }
+    }
+
+}
