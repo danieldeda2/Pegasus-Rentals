@@ -5,77 +5,77 @@ import turo from './turo.png'
 import tiktok from './tiktok.png'
 import './Footer.css'
 
-
-
 const Footer = () => {
   return (
-    <div className='footer'>
-
-        <div className='row'>
-
-            <div className='columns'>
-    
-                <div className='logo_name'>
-
-                    <img src={pegasus} className='horse_logo'></img>
-                    <h2>Pegasus</h2>
-
-                </div>
-
-                <div className='slogan'>
-                <h3>Where convenience meets affordability.</h3>
-                </div>
+    <footer className='footer'>
+      <div className="footer-container">
+        <div className='footer-content'>
+          {/* Brand Column */}
+          <div className='footer-column brand-column'>
+            <div className='footer-logo'>
+              <img src={pegasus} className='logo-icon' alt="Pegasus Logo" />
+              <span className='logo-text'>PEGASUS</span>
             </div>
+            <p className='footer-tagline'>
+              Where convenience meets affordability.
+            </p>
+          </div>
 
-
-
-            <div className='columns'>
-
-                <h4>SUBSCRIBE WITH EMAIL FOR DISCOUNT DEALS</h4>
-
-                <div className="email">
-                    <input type="email" name="user_email" placeholder=' Email Address...' required/>
-                    <button>Subscribe</button>
-                </div>
-                
+          {/* Newsletter Column */}
+          <div className='footer-column newsletter-column'>
+            <h4 className='column-title'>Stay Updated</h4>
+            <p className='column-subtitle'>Subscribe for exclusive deals and updates</p>
+            <div className="newsletter-form">
+              <input 
+                type="email" 
+                name="user_email" 
+                placeholder='Your email address' 
+                required
+              />
+              <button className='subscribe-btn'>
+                Subscribe
+              </button>
             </div>
+          </div>
 
-
-            <div className='columns'>
-
-                <h4>FOLLOW US</h4>
-
-                <div className='social_media_icons'>
-                    <a href="https://www.instagram.com/drivepegasus/"><img src={insta}/></a>
-                    <a href="https://turo.com/us/en/drivers/45444608"><img src={turo}/></a>
-                    <img src={tiktok}/>
-                </div>
-
-                
+          {/* Social Column */}
+          <div className='footer-column'>
+            <h4 className='column-title'>Follow Us</h4>
+            <div className='social-links'>
+              <a href="https://www.instagram.com/drivepegasus/" className='social-link' aria-label="Instagram">
+                <img src={insta} alt="Instagram" />
+              </a>
+              <a href="https://turo.com/us/en/drivers/45444608" className='social-link' aria-label="Turo">
+                <img src={turo} alt="Turo" />
+              </a>
+              <a href="#" className='social-link' aria-label="TikTok">
+                <img src={tiktok} alt="TikTok" />
+              </a>
             </div>
+          </div>
 
-
-
-            <div className='columns'>
-
-                <h4>CALL US</h4>
-
-                <h3> +1 (929) 342-8572</h3>
-
-                
-            </div>
-
-
+          {/* Contact Column */}
+          <div className='footer-column'>
+            <h4 className='column-title'>Contact</h4>
+            <a href="tel:+19293428572" className='contact-link'>
+              +1 (929) 342-8572
+            </a>
+          </div>
         </div>
 
-
-        <div className='copyright'>
-            <h7>© 2025 by Pegasus | All Rights Reserved | Terms & Conditions</h7>
+        {/* Copyright Bar */}
+        <div className='footer-bottom'>
+          <p className='copyright'>
+            © 2025 Pegasus Rentals. All Rights Reserved.
+          </p>
+          <div className='footer-links'>
+            <a href="#" className='footer-link'>Terms & Conditions</a>
+            <span className='separator'>•</span>
+            <a href="#" className='footer-link'>Privacy Policy</a>
+          </div>
         </div>
-
-
-
-    </div>
+      </div>
+    </footer>
   )
 }
 

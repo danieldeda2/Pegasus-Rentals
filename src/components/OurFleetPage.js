@@ -1,29 +1,17 @@
 import React from 'react'
 import Navbar from './Navbar'
+import OurFleet from './OurFleet'
+import FleetItems from './FleetItems'
 import Footer from './Footer'
 import './OurFleetPage.css'
-import FleetItems from './FleetItems'
-
 
 const OurFleetPage = () => {
   return (
-
     <div className='OurFleetPage'>
-
-        <Navbar/>
-
-        <div className='ourFleet'>
-
-          <h1>Our Fleet</h1>
-
-          <div className="move">
-            <FleetItems/>
-          </div>
-
-        </div>
-
-        <Footer/>
-
+      <Navbar/>
+      <OurFleet/>
+      <FleetItems/>
+      <Footer/>
     </div>
   )
 }

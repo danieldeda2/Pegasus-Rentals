@@ -1,104 +1,69 @@
-.OurFleet{
-
-    width: 80vw; 
-    margin-left: 10vw;
-    
-
-    .fleet_items{
-        margin-left: 0vw;
-        width: 80vw;
-    }
+.home {
+  background: #000;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-@media screen and (max-width: 1000px){
-
-        .brands{
-            display: none;
-        }
-
-
+/* Global spacing adjustments */
+.home > * + * {
+  margin-top: 0;
 }
 
-
-@media screen and (max-width: 1400px){
-
-    .OurFleet{
-
-        width: 10vw;
-        margin-left: 32.5vw;
-
-        .fleet_items{
-            width: 10vw;
-        }
-        
-        .brands{
-            width: 40vw;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            margin-bottom: -60px;
-            
-            img{
-                margin-bottom: 50px;
-            }
-        }
-
-
-
-    }
-
+/* Remove default margins from sections */
+.Welcome,
+.quickstats,
+.OurFleet,
+.FAQ,
+.contactUs,
+.footer {
+  margin-top: 0;
 }
 
-@media screen and (max-width: 1000px){
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
 
-    .OurFleet{
+/* Hide scrollbar but keep functionality */
+body::-webkit-scrollbar {
+  width: 10px;
+}
 
-        .brands{
-            display: none;
-        }
+body::-webkit-scrollbar-track {
+  background: #000;
+}
 
-        .fleet_items{
-            margin-top: -50px;
-        }
+body::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.5);
+  border-radius: 5px;
+}
 
-    }
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.7);
+}
 
+/* Global text selection */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #fff;
+}
 
+/* Responsive adjustments for OurFleet media queries from original */
+@media screen and (max-width: 1400px) {
+  .OurFleet {
+    /* Keep original responsive behavior if needed */
+  }
+}
 
+@media screen and (max-width: 1000px) {
+  .OurFleet .brands {
+    /* Keep original responsive behavior if needed */
+  }
+}
 
-} 
-
-
-
-
-@media screen and (max-width: 450px){
-
-    .OurFleet{
-        width: 50vw;
-        margin-left: -30vw;
-
-        .fleet_items{
-            margin-top: -10px;
-            width: 10vw;
-            margin-left: 42.7vw;
-        }
-
-        h1{
-            margin-left: 35vw;
-            font-weight: 600;
-            margin-bottom: -15px;
-        }
-
-        .brands{
-            display: none;
-        }
-
-
-    }
-
-    .FAQ{
-        width: 90vw;
-        margin-left: 10vw;
-    }
-
-
-} 
+@media screen and (max-width: 450px) {
+  .FAQ {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+}

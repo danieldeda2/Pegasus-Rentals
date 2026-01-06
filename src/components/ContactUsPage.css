@@ -1,169 +1,23 @@
-.ContactUsPage{
-    margin-top: 200px;
-    background-color: black;
+.ContactUsPage {
+  width: 100%;
+  max-width: 100%;
+  background: #000;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.footer{
-    padding-top: 7px;
-
-    .copyright{
-        width: 99.2vw;
-    }
+.ContactUsPage .contactUs {
+  margin-top: 70px;
 }
 
-.contactus{
-    margin-top: 10px;
-    margin-bottom: 44px;
-
-    
-        /* full‐screen semi-transparent backdrop */
-        .modal-overlay {
-        display: flex;
-        width: 95vw;
-        height: 70vh;
-        margin-left: 0vw;
-        border-radius: 50px;
-        background: rgba(0,0,0,0.5);
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        margin-top: -550px;
-        overflow-y: auto;
-        }
-
-        /* white box centering the iframe */
-        .modal-content {
-        position: absolute;
-        background: #fff;
-        border-radius: 50px;
-        overflow-y: auto;
-        width: 95vw;
-        height: 70vh;
-        margin-left: 5vw;
-        }
-
-        /* close “X” in top-right */
-        .modal-close {
-
-        position: absolute;
-        width: 5vw;
-        height: 5vw;
-        top: 20px; 
-        right: 30px;
-        background: #fff;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 1001;
-
-        }
-
-
-
+@media screen and (min-width: 768px) {
+  .ContactUsPage .contactUs {
+    margin-top: 80px;
+  }
 }
 
-@media screen and (max-width: 1200px) {
-
-    .contactus{
-
-                /* full‐screen semi-transparent backdrop */
-        .modal-overlay {
-        display: flex;
-        width: 95vw;
-        height: 70vh;
-        margin-left: 0vw;
-        border-radius: 50px;
-        background: rgba(0,0,0,0.5);
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        margin-top: -500px;
-        overflow-y: auto;
-        }
-
-        /* white box centering the iframe */
-        .modal-content {
-        position: relative;
-        background: #fff;
-        border-radius: 50px;
-        overflow: hidden;
-        width: 95vw;
-        height: 70vh;
-        margin-left: 5vw;
-        overflow-y: auto;
-        }
-
-        /* close “X” in top-right */
-        .modal-close {
-
-        position: absolute;
-        width: 5vw;
-        height: 5vw;
-        top: 20px; 
-        right: 30px;
-        background: #fff;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 1001;
-
-        }
-    }
-
+@media screen and (min-width: 1024px) {
+  .ContactUsPage .contactUs {
+    margin-top: 85px;
+  }
 }
-
-
-@media screen and (max-width: 600px) {
-
-    .contactus{
-        margin-top: -140px;
-
-        
-        /* full‐screen semi-transparent backdrop */
-.modal-overlay {
-  display: flex;
-  width: 95vw;
-  height: 100vh;
-  margin-left: 0vw;
-  border-radius: 50px;
-  background: rgba(0,0,0,0.5);
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  margin-top: -650px;
-  overflow-y: auto;
-}
-
-/* white box centering the iframe */
-.modal-content {
-  position: relative;
-  background: #fff;
-  border-radius: 50px;
-  overflow: hidden;
-  width: 95vw;
-  height: 85vh;
-  margin-left: 5vw;
-  overflow-y: auto;
-}
-
-/* close “X” in top-right */
-.modal-close {
-
-position: absolute;
-  width: 5vw;
-  height: 5vw;
-  top: 20px; 
-  right: 30px;
-  background: #fff;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 1001;
-
-}
-    
-    }
-
-    
-}
-

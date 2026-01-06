@@ -1,63 +1,27 @@
-.OurFleetPage{
-
-    .ourFleet{
-        margin-top: 50px;
-        color: white;
-        background-color: black;
-        width: 98vw;
-        align-items: center;
-
-        h1{
-            margin-bottom: -30px;
-            width: 80vw;
-            margin-left: 10vw;
-            text-align: center;
-        }
-
-        .move{
-            width: 80vw;
-            margin-left: 10vw;
-        }
-
-    }
-
+/* VERSION 2.0 - MOBILE FIXED - 20260106_0603 */
+.OurFleetPage {
+  width: 100%;
+  max-width: 100%;
+  background: #000;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-@media screen and (max-width: 1400px) {
-
-
-
+.OurFleetPage .OurFleet {
+  margin-top: 70px;
+  padding-top: 40px;
 }
 
-
-@media screen and (max-width: 700px) {
-
-    .ourFleet{
-        margin-left:  0vw;
-    }
-
+@media screen and (min-width: 768px) {
+  .OurFleetPage .OurFleet {
+    margin-top: 80px;
+    padding-top: 50px;
+  }
 }
 
-
-
-
-@media screen and (max-width: 450px) {
-
-    .ourFleet{
-
-        h1{
-            font-size: 60px;
-            padding-top: 20px;
-            margin-left: -55px;
-        }
-
-        .move{
-            .fleet_items{
-                margin-top: -20px;
-                width: 20vw;
-                margin-left: 2.5vw;
-            }
-        }
-    }
-
+@media screen and (min-width: 1024px) {
+  .OurFleetPage .OurFleet {
+    margin-top: 85px;
+    padding-top: 60px;
+  }
 }

@@ -1,10 +1,9 @@
+// VERSION 2.0 - MOBILE FIXED - 20260106_0603
 import React from 'react'
 import './FleetItems.css'
 import { useNavigate } from 'react-router-dom'
 
-import { motion } from "motion/react"
-
-// cars (edit this)
+// cars
 import cadillac_escalade_2018 from './fleet_items/cadillac_escalade_2018.PNG'
 import fiat_500_2016 from './fleet_items/fiat_500_2016.PNG'
 import ford_explorer_2020 from './fleet_items/ford_explorer_2020.PNG'
@@ -16,815 +15,98 @@ import honda_pilot_2017 from './fleet_items/honda_pilot_2017.PNG'
 import hyundai_sante_fe_2022 from './fleet_items/hyundai_sante_fe_2022.png'
 import m8 from './fleet_items/m8.PNG'
 
-// icons (dont touch)
+// icons
 import capacity_icon from './person_icon.png'
 import mpg_icon from './mpg_icon.png'
 import car_doors_icon from './car_door_icon.png'
 import drivetrain_icon from './drivetrain_icon.png'
 
-
-
-
 const FleetItems = () => {
-
   const navigate = useNavigate();
 
-  const redirect0 = () => {
-    localStorage.setItem("car", "2020 BMW M8 Convertible")
-    navigate('/ContactUs'); 
-  };
+  const cars = [
+    { id: 0, name: "BMW M8 Convertible", year: "2020", image: m8, capacity: 4, drivetrain: "AWD", mpg: 17, doors: 2, category: "Luxury Sports" },
+    { id: 1, name: "Range Rover Sport", year: "2019", image: range_rover_sport_2019, capacity: 5, drivetrain: "AWD", mpg: 19, doors: 4, category: "Luxury SUV" },
+    { id: 5, name: "Cadillac Escalade", year: "2018", image: cadillac_escalade_2018, capacity: 8, drivetrain: "RWD", mpg: 17, doors: 4, category: "Premium SUV" },
+    { id: 2, name: "Honda Pilot", year: "2017", image: honda_pilot_2017, capacity: 8, drivetrain: "FWD", mpg: 23, doors: 4, category: "Family SUV" },
+    { id: 3, name: "Chevrolet Impala", year: "2018", image: chevy_impala_2018, capacity: 5, drivetrain: "FWD", mpg: 25, doors: 4, category: "Sedan" },
+    { id: 4, name: "Ford Explorer", year: "2020", image: ford_explorer_2020, capacity: 7, drivetrain: "RWD", mpg: 24, doors: 4, category: "SUV" },
+    { id: 6, name: "Ford Escape", year: "2014", image: ford_escape_2014, capacity: 5, drivetrain: "FWD", mpg: 25, doors: 4, category: "Compact SUV" },
+    { id: 7, name: "Hyundai Sante Fe", year: "2022", image: hyundai_sante_fe_2022, capacity: 5, drivetrain: "FWD", mpg: 26, doors: 4, category: "SUV" },
+    { id: 8, name: "Fiat 500", year: "2016", image: fiat_500_2016, capacity: 2, drivetrain: "FWD", mpg: 34, doors: 2, category: "Compact" },
+    { id: 9, name: "Hyundai Elantra", year: "2017", image: hyundai_elantra_2017, capacity: 5, drivetrain: "FWD", mpg: 32, doors: 4, category: "Sedan" }
+  ];
 
-  const redirect1 = () => {
-    localStorage.setItem("car", "2019 Range Rover Sport")
-    navigate('/ContactUs'); 
+  const handleReservation = (carName, carYear) => {
+    localStorage.setItem("car", `${carYear} ${carName}`);
+    navigate('/ContactUs');
   };
-
-  const redirect2 = () => {
-    localStorage.setItem("car", "2017 Honda Pilot")
-    navigate('/ContactUs'); 
-  };
-
-  const redirect3 = () => {
-    localStorage.setItem("car", "2018 Chevrolet Impala")
-    navigate('/ContactUs'); 
-  };
-
-  const redirect4 = () => {
-    localStorage.setItem("car", "2020 Ford Explorer")
-    navigate('/ContactUs'); 
-  };
-
-  const redirect5 = () => {
-    localStorage.setItem("car", "2018 Cadillac Escalade")
-    navigate('/ContactUs'); 
-  };
-
-  const redirect6 = () => {
-    localStorage.setItem("car", "2014 Ford Escape")
-    navigate('/ContactUs'); 
-  };
-
-  const redirect7 = () => {
-    localStorage.setItem("car", "2022 Hyundai Sante Fe")
-    navigate('/ContactUs'); 
-  };
-
-  const redirect8 = () => {
-    localStorage.setItem("car", "2016 Fiat 500")
-    navigate('/ContactUs'); 
-  };
-
-  const redirect9 = () => {
-    localStorage.setItem("car", "2017 Hyundai Elantra")
-    navigate('/ContactUs'); 
-  };
-
 
   return (
-    <div className='fleet_items'>
+    <div className='fleet-items-wrapper'>
+      <div className='fleet_items'>
+        {cars.map((car) => (
+          <div key={car.id} className="vehicle-card">
+            <div className="vehicle-category">{car.category}</div>
 
-      {/* list item 1 */}
-
-      <div className='car'>
-
-        <img src={m8}></img>
-
-        <h3>BMW M8 Convertible</h3>
-
-        <h5>2020</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>4</p>
-
+            <div className="vehicle-image-container">
+              <img 
+                src={car.image} 
+                alt={car.name}
+                className="vehicle-image"
+              />
+              <div className="vehicle-shadow"></div>
             </div>
 
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>AWD</p>
-
+            <div className="vehicle-info">
+              <h3 className="vehicle-name">{car.name}</h3>
+              <div className="vehicle-year">{car.year}</div>
             </div>
 
-          </div>
+            <div className="vehicle-specs">
+              <div className="spec-item">
+                <img src={capacity_icon} alt="Seats" className="spec-icon" />
+                <div className="spec-details">
+                  <span className="spec-label">Seats</span>
+                  <span className="spec-value">{car.capacity}</span>
+                </div>
+              </div>
 
-          <div className='attribute3'>
+              <div className="spec-item">
+                <img src={drivetrain_icon} alt="Drive" className="spec-icon" />
+                <div className="spec-details">
+                  <span className="spec-label">Drive</span>
+                  <span className="spec-value">{car.drivetrain}</span>
+                </div>
+              </div>
 
-            <h6>MPG</h6>
+              <div className="spec-item">
+                <img src={mpg_icon} alt="MPG" className="spec-icon" />
+                <div className="spec-details">
+                  <span className="spec-label">MPG</span>
+                  <span className="spec-value">{car.mpg}</span>
+                </div>
+              </div>
 
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>17</p>
-
+              <div className="spec-item">
+                <img src={car_doors_icon} alt="Doors" className="spec-icon" />
+                <div className="spec-details">
+                  <span className="spec-label">Doors</span>
+                  <span className="spec-value">{car.doors}</span>
+                </div>
+              </div>
             </div>
 
+            <button
+              className="reserve-button"
+              onClick={() => handleReservation(car.name, car.year)}
+            >
+              Reserve Vehicle
+            </button>
           </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>2</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect0}>Book Now</button>
-
+        ))}
       </div>
-
-      {/* end car 1 */}
-    
-      <div className='car'>
-
-        <img src={range_rover_sport_2019}></img>
-
-        <h3>Range Rover Sport</h3>
-
-        <h5>2019</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>5</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>AWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>19</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect1}>Book Now</button>
-
-      </div>
-
-
-      {/* end of car 1*/}
-
-      {/* list item 2 */}
-
-      
-      <div className='car'>
-
-        <img src={cadillac_escalade_2018}></img>
-
-        <h3>Cadillac Escalade</h3>
-
-        <h5>2018</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>8</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>RWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>17</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect5}>Book Now</button>
-
-
-      </div>
-
-
-      <div className='car'>
-
-        <img src={honda_pilot_2017}></img>
-
-        <h3>Honda Pilot</h3>
-
-        <h5>2017</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>8</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>FWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>23</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect2}>Book Now</button>
-
-      </div>
-
-      <div className='car'>
-
-        <img src={chevy_impala_2018}></img>
-
-        <h3>Chevrolet Impala</h3>
-
-        <h5>2018</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>5</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>FWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>25</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-        
-        <button onClick={redirect3}>Book Now</button>
-
-
-      </div>
-
-      <div className='car'>
-
-        <img src={ford_explorer_2020}></img>
-
-        <h3>Ford Explorer</h3>
-
-        <h5>2020</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>7</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>RWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>24</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect4}>Book Now</button>
-
-
-      </div>
-
-      <div className='car'>
-
-        <img src={ford_escape_2014}></img>
-
-        <h3>Ford Escape</h3>
-
-        <h5>2014</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>5</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>FWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>25</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect6}>Book Now</button>
-
-
-      </div>
-
-      <div className='car'>
-
-        <img src={hyundai_sante_fe_2022}></img>
-
-        <h3>Hyundai Sante Fe</h3>
-
-        <h5>2022</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>5</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>FWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>26</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect7}>Book Now</button>
-
-
-      </div>
-
-      <div className='car'>
-
-        <img src={fiat_500_2016}></img>
-
-        <h3>Fiat 500</h3>
-
-        <h5>2016</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>2</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>FWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>34</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>2</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect8}>Book Now</button>
-
-
-      </div>
-
-      <div className='car'>
-
-        <img src={hyundai_elantra_2017}></img>
-
-        <h3>Hyundai Elantra</h3>
-
-        <h5>2017</h5>
-
-        <div className='attributes'>
-
-          <div className='attribute1'>
-
-            <h6>Capacity</h6>
-
-            <div className='split1'>
-
-              <img src={capacity_icon} className='capacity_icon'></img>
-
-              <p className='capacity_amount'>5</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute2'>
-
-            <h6>Drivetrain</h6>
-
-            <div className='split2'>
-
-              <img src={drivetrain_icon} className='drivetrain_icon'></img>
-
-              <p>FWD</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute3'>
-
-            <h6>MPG</h6>
-
-            <div className='split3'>
-
-              <img src={mpg_icon} className='mpg_icon'></img>
-
-              <p>32</p>
-
-            </div>
-
-          </div>
-
-          <div className='attribute4'>
-
-            <h6>Doors</h6>
-
-            <div className='split4'>
-
-              <img src={car_doors_icon} className='car_doors_icon'></img>
-
-              <p>4</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button onClick={redirect9}>Book Now</button>
-
-
-      </div>
-
-
     </div>
-
-
   )
 }
 
